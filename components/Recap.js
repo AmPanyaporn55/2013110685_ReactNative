@@ -16,25 +16,25 @@ const Recap = () => {
 
   return (
     <View style={styles.container}>
-    <TextInput
-    placeholder='Email'
-    style = {styles.input}
-    value= {textInputEmail} //ค่าของstate text ปัจจุบัน
-    onChangeText={(value) => {setTextInputEmail(value)}}
-    />
-    <TextInput
-    placeholder='Password'
-    style = {styles.input}
-    value= {textInputPassword} //ค่าของstate text ปัจจุบัน
-    onChangeText={(value) => {setTextInputPassword(value)}}
-    />
-    <Text>{'\n\n'}</Text>
-    <Button
-    style = {styles.submitButton}
-    title='Submit'
-    onPress= {() => {
-        alertTextInput()} }
-    />
+        <TextInput
+            placeholder='Email'
+            style = {styles.input}
+            value= {textInputEmail} //ค่าของstate text ปัจจุบัน
+            onChangeText={(value) => {setTextInputEmail(value)}}
+        />
+        <TextInput
+            placeholder='Password'
+            style = {styles.input}
+            value= {textInputPassword} //ค่าของstate text ปัจจุบัน
+            onChangeText={(value) => {setTextInputPassword(value)}}
+        />
+        <Text>{'\n\n'}</Text>
+        <Button
+            style = {styles.submitButton}
+            title='Submit'
+            onPress= {() => {
+                alertTextInput()} }
+        />
   </View>
   )
 }
