@@ -8,6 +8,7 @@ import MyInput from './components/MyInput';
 import IncrementCounter from './components/IncrementCounter';
 import Form from './components/Form';
 import Login from './components/Login';
+import Recap from './components/Recap';
 
 
 export default function App() {
@@ -21,7 +22,8 @@ export default function App() {
       {/* <MyInput/> */}
       {/* <IncrementCounter/> */}
       {/* <Form/> */}
-      <Login/>
+      {/* <Login/> */}
+      <Recap/>
     </View>
   );
 }
