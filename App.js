@@ -2,12 +2,14 @@ import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import TouchableExample from './components/TouchableExample'
 import TouchablePractice from './components/TouchablePractice'
+import Example_useEffect from './components/Example_useEffect'
 
 const App = () => {
   return (
-    <View>
+    <View style={styles.container}>
       {/* <TouchableExample/> */}
-      <TouchablePractice/>
+      {/* <TouchablePractice/> */}
+      <Example_useEffect/>
     </View>
   )
 }
