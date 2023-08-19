@@ -9,28 +9,34 @@ const Example_useEffect = () => {
   useEffect(() => {
     //Fetch data from the API using axios
     axios.get('https://jsonplaceholder.typicode.com/posts')
-        .then((response) => {
-            //Handle successful response
-            setData(response.data);
-        })
-        .catch(() => {
-            //Handle error
-            console.error('Error fetch data: ',error);
-        })
-  },[])//The empty dependency array ensures this effect runs only once when the conponent mounts
+      .then((response) => {
+        //Handle successful response
+        setData(response.data);
+      })
+      .catch(() => {
+        //Handle error
+        console.error('Error fetch data: ', error);
+      })
+  }, [])//The empty dependency array ensures this effect runs only once when the conponent mounts
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Posts from API;</Text>
       {
         data.map((post) => (
-            <View key={post.id} style={styles.post}>
-                <Text style={styles.postTitle}>{post.title}</Text>
-                <Text style={styles.postTitle}>{post.body}</Text>
-            </View>
+          <View key={post.id} style={styles.post}>
+            <Text style={styles.postTitle}>{post.title}</Text>
+            <Text>{post.body}</Text>
+          </View>
 
         ))
       }
+      {data.map((post) =>
+        <View key={post.id} style={styles.post}>
+          <Text style={styles.postTitle}>{post.title}</Text>
+          <Text>{post.body}</Text>
+        </View>
+      )}
     </View>
   );
 };
