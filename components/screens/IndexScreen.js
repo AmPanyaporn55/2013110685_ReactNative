@@ -23,9 +23,9 @@ const IndexScreen = ({navigation,route}) => {
         }}
       />
       <Text>{'\n'}</Text>
-      <Text>Post: {route.params?.post}</Text>
+      <Text style={{margin:10}}>Post: {route.params?.post}</Text>
     </View>
-  )
-}
+  );
+};
 
 export default IndexScreen
